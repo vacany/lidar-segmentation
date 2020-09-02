@@ -1,0 +1,31 @@
+DATA:
+  AREA_SIZE:
+    - !!python/tuple [-10, 150]
+    - !!python/tuple [-40, 40]
+
+  CELL_SIZE: !!python/tuple [0.4, 0.4]
+  NUM_FRAMES: 80
+  EVERY_TH: 3
+
+
+  PS: {0: 1,  # Road boundary
+       1: 2,  # Car?
+       2: 1,  # Car
+       3: 2,  # Car
+       4: 1,  # Road boundary
+       5: 1,  # Road boundary
+       6: 1,
+       7: 1}  # Road bonudary
+
+  GT : {0 : 0, # Road boundary
+        1 : 2, # Car
+        2 : 2, # Car
+        3 : 2} # Car
+
+
+INFO:
+  MAP_LAYER : ['h', 'i', 'occ', 'gt', 'ps']
+  MAX_VALUES : {'z' : 2}
+  ANNO: {'Nothing' : 0,
+         'Road boundary' : 1,
+         'Car' : 2}
